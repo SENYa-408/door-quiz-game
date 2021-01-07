@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Door Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nums">
+        <p>Score: <span id="score">0</span></p>
+        <p>HI: <span id="hi">0</span></p>
+      </div>
+
+      <div class="questions">
+        <p id="question">Pick topic of questions</p>
+      </div>
+
+      <div id="pick_list">
+        <p class="answer"></p>
+        <p class="answer"></p>
+        <p class="answer"></p>
+      </div>
+
+      <div class="doors">
+        <div class="door" id="door1"><img src="./imgs/closed_door.png" /></div>
+        <div class="door" id="door2"><img src="./imgs/closed_door.png" /></div>
+        <div class="door" id="door3"><img src="./imgs/closed_door.png" /></div>
+      </div>
+
+      <div class="buttons">
+        <button id="achievements" class="achievements">Achievements</button>
+        <button id="topic" class="topic">Theme of questions</button>
+      </div>
+    </div>
+
+    <div id="modal-wrapper-achieve" class="modal-wrapper">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="achieve-close" class="close">&times;</span>
+          <h2>Achievements</h2>
+        </div>
+        <div class="modal-body">
+          <div id="loser-ach" class="achieve achieve-locked">
+            <img src="https://img.icons8.com/ios/50/000000/loser.png" />
+            <div>
+              <h2>Loser</h2>
+              <p>Lose 10 times in a row</p>
+            </div>
+          </div>
+
+          <div id="winner-ach" class="achieve achieve-locked">
+            <img src="https://img.icons8.com/ios/50/000000/trophy.png" />
+            <div>
+              <h2>Winner</h2>
+              <p>Earn 30 points</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+
+    <div id="modal-wrapper-topic" class="modal-wrapper">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="topic-close" class="close">&times;</span>
+          <h2>Questions topic</h2>
+        </div>
+        <div class="modal-body topic-modal">
+          <p>
+            <input name="topic" type="radio" value="all" checked="true" /> All
+          </p>
+          <p><input name="topic" type="radio" value="games" /> Games</p>
+          <p><input name="topic" type="radio" value="films" /> Films</p>
+          <p><input name="topic" type="radio" value="logic" /> Logic</p>
+          <p><input name="topic" type="radio" value="other" /> Other</p>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+
+    <audio id="bruh" src="/sounds/bruh.mp3"></audio>
+    <audio id="bruh-but-slower" src="/sounds/bruh-but-slower.mp3"></audio>
+    <audio id="bruh-remix" src="/sounds/bruh-remix.mp3"></audio>
+    <audio id="game-over" src="/sounds/mario-lost-life.mp3"></audio>
+    <audio id="win" src="/sounds/mission-complete.mp3"></audio>
+    <audio id="food" src="/sounds/food.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
